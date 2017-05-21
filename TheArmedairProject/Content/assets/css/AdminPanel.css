@@ -1,0 +1,43 @@
+﻿.body-content{
+    /*margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;*/
+}
+
+    /* =Header Settings= */
+#header {
+    margin-left:0;
+    margin-right:0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #22313F;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+#header h1 {
+    margin-top: 10px;
+}
+
+#header .create {
+    padding-top: 17px;
+}
+
+    /* == */
+.breadcrumb{
+    background: #cccccc;
+    color: #333333;
+}
+
+.breadcrumb a {
+    color: #333333;
+}
+
+    /* =Main Section=*/
+
+.dropdown-menu {
+    /*position: static !important;*/
+}
+
