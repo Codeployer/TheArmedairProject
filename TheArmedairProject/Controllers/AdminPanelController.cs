@@ -13,5 +13,10 @@ namespace TheArmedairProject.Controllers
         {
             return View();
         }
+
+        public ActionResult Pages()
+        {
+            return View();
+        }
     }
 }
