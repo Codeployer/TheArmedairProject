@@ -203,6 +203,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\assets\css\AdminPanel.css" />
+    <Content Include="Content\assets\css\Update.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -261,6 +262,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\AdminPanel\Index.cshtml" />
     <Content Include="Views\AdminPanel\Pages.cshtml" />
+    <Content Include="Views\AdminPanel\_AdminPanelLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
