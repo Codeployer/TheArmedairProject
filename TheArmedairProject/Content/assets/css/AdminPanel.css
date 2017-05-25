@@ -1,19 +1,6 @@
-﻿/*body {
-    background-color: #22313F;
-}*/
-
-/*#header.container.body-content.no-margin {
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
-    max-width: none;
-} /* >.< */
-
-/*.body-content {
-    background-color: white;
-}*/
-
+﻿.body-content {
+    padding-top: 0;
+}
     /* =Header Settings= */
 .main-color-bg {
     background-color: #34495E !important;
@@ -25,17 +12,14 @@
 }
 
 #header {
-    margin-top: 45px; 
-    margin-left:0;
-    margin-right:0;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 20px 10px 20px;
     background-color: #22313F;
     color: #FFFFFF;
-    margin-bottom: 20px;
+    margin: 45px 0 0 0;
 }
 
 #header h1 {
+    padding-left: 10px;
     margin-top: 10px;
 }
 
@@ -43,8 +27,16 @@
     padding-top: 17px;
 }
 
+.container > .deep-shadow {
+    font-size: 50px;
+    color: #131313;
+    letter-spacing: 0.05em;
+    text-shadow: 0.5px -0.5px 0 #767676, -0.5px 1px 0.5px #737272, -1px 2px 0.5px #767474;
+}
+
     /* == */
 .breadcrumb{
+    margin-top: 20px;
     background: #cccccc;
     color: #333333;
 }
@@ -68,4 +60,56 @@
 
 .well .glyphicon {
     font-size: 40px;
+}
+
+input {
+    max-width: none;
+}
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+.btn-fresh {
+    color: #fff;
+    background-color: #51bf87;
+    border-bottom:2px solid #41996c;
+}
+
+.btn-fresh:hover, .btn-sky.active:focus, .btn-fresh:focus, .open>.dropdown-toggle.btn-fresh {
+    color: #fff;
+    background-color: #66c796;
+    border-bottom:2px solid #529f78;
+    outline: none;
+}
+
+
+.btn-fresh:active, .btn-fresh.active {
+    color: #fff;
+    background-color: #47a877;
+    border-top: 2px solid #39865f;
+    outline: none;
+    outline-offset: unset;
+    margin-top: 2px;
+}
+
+.btn-hot {
+    color: #fff;
+    background-color: #db5566;
+    border-bottom: 2px solid #af4451;
+}
+
+.btn-hot:hover, .btn-sky.active:focus, .btn-hot:focus, .open > .dropdown-toggle.btn-hot {
+    color: #fff;
+    background-color: #df6a78;
+    border-bottom: 2px solid #b25560;
+    outline: none;
+}
+
+.btn-hot:active, .btn-hot.active {
+    color: #fff;
+    background-color: #c04b59;
+    border-top: 2px solid #9a3c47;
+    margin-top: 2px;
 }

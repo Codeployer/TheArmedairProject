@@ -1,11 +1,7 @@
 ﻿@{
     ViewBag.Title = "Control Panel | Dashboard";
 }
-
-<head>
-    <link rel="stylesheet" href="~/Content/assets/css/AdminPanel.css"/>
-    <script src="https://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
-</head>
+    <!--<script src="https://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>-->
 
 <!--Blue Navigation Bar-->
 <header id="header">
@@ -16,14 +12,14 @@
             </div>
             <div class="col-md-2">
                 <div class="dropdown create">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                         Create Content
                         <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <li><a type="button" data-toggle="modal" data-target="#addPage" href="#">Add Page</a></li>
-                        <li><a href="#">Add Post</a></li>
-                        <li><a href="#">Add User</a></li>
+                        <li><a href="@Url.Action("CreatePage", "AdminPanel")">Add Page</a></li>
+                        <li><a href="@Url.Action("CreatePost", "AdminPanel")">Add Post</a></li>
+                        <li><a href="#">Edit Permissions</a></li>
                     </ul>
                 </div>
             </div>
@@ -32,6 +28,7 @@
 </header>
 
 <div class="container body-content">
+
     <!--Dashboard title [nothing special]-->
     <section id="breadcrumb">
         <div class="container">
@@ -144,7 +141,8 @@
 <!-- Modals -->
 
 <!-- Add Page -->
-<!--<div class="modal fade" id="addPage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<!--
+<div class="modal fade" id="addPage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <form>
@@ -159,7 +157,7 @@
                     </div>
                     <div class="form-group">
                         <label>Page Content</label>
-                        <textarea name="editor1" class="form-control" placeholder="Page Body" />
+                        <textarea id="label1" name="editor1" class="form-control" placeholder="Page Body" />
                     </div>
                     <div class="checkbox">
                         <label>
@@ -182,8 +180,8 @@
             </form>
         </div>
     </div>
-</div>-->
-
-<script>
-    CKEDITOR.replace('editor1');
-</script>
+</div>
+-->
+@*<script>
+    ('label1').CKEDITOR.replace('editor1');
+</script>*@
