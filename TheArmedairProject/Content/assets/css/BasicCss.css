@@ -5,17 +5,20 @@
     padding-bottom: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 div.container.body-content {
-    background-color: #ffffff;
+    padding-top: 0;
+    background-color: inherit;
 }
 
 .jumbotron h1 {
     font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
     font-size: 65px;
     color: #131313;
-    padding: 5px 50px;
+    padding: 5px 10px;
     text-transform: uppercase;
     text-rendering: optimizeLegibility;
     letter-spacing: .15em;
@@ -26,4 +29,19 @@ h3.xbootstrap {
     color: #e2e0df;
     letter-spacing: .1em;
     text-shadow: -0.25px -0.25px 0.25px #111, 0.5px 0.5px 0.25px #363636;
+}
+
+.post-content {
+    text-align: justify;
+    font-family: 'Trebuchet MS';
+    color: #323232;
+    font-size: 15px;
+    margin: 20px 20px 20px 20px;
+    padding: 30px 30px 30px 30px;
+    background-color: #faf9f9;
+    box-shadow: -2px 2px 1px #a8a6a6, -4px 5px 1px #bcbbba, -6px 8px 1px #d4d2d1, -8px 11px 1px #e4e3e2;
+}
+
+h6 {
+    color: #666666;
 }
