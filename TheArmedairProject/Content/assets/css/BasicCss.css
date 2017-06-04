@@ -84,6 +84,19 @@ h6 {
     border-color: #bebebe;
 }
 
+.btn-magick {
+    color: #fff;
+    background-color: #bb39d7;
+    border-color: #9a00cd;
+    text-shadow: 1px 1px 0 #9823d5;
+}
+
+.btn-magick:hover, .btn-magick:focus {
+    color: #fff;
+    background-color: #b13acd;
+    border-color: #8600b9;
+}
+
 .btn-pressure:active, .btn-pressure.active {
     top: 4px;
     border: 0;
