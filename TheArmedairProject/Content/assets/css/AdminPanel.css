@@ -27,6 +27,10 @@
     padding-top: 17px;
 }
 
+.table tbody > tr > td {
+    vertical-align: middle !important;
+}
+
 .container > .deep-shadow {
     font-size: 50px;
     color: #131313;

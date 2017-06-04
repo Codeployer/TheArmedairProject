@@ -2,39 +2,48 @@
 @{
     ViewBag.Title = "Register";
 }
+<div class="jumbotron elegantshd">
+    <div class="container">
+        <h3 class="xbootstrap">Ow.. New guest! Hey there.</h3>
+        <h1>The Lady Armedair</h1>
+        <h3 class="xbootstrap" style="padding-top: 40px;">Maybe we should know better each other? ~<span class="glyphicon glyphicon-heart" aria-hidden="true"></span></h3>
+    </div>
+</div>
+<hr id="pure-line" />
+<div class="container body-content" style="text-align:center;">
+    <h2>@ViewBag.Title.</h2>
 
-<h2>@ViewBag.Title.</h2>
-
-@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-{
-    @Html.AntiForgeryToken()
-    <h4>Create a new account.</h4>
-    <hr />
-    @Html.ValidationSummary("", new { @class = "text-danger" })
-    <div class="form-group">
-        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+    @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        <h4>Create a new account.</h4>
+        <hr />
+        @Html.ValidationSummary("", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(m => m.Email, new { @class = "col-md-4 control-label" })
+            <div class="col-md-4">
+                @Html.TextBoxFor(m => m.Email, new { @style = "max-width: 100%;", @class = "form-control" })
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+        <div class="form-group">
+            @Html.LabelFor(m => m.Password, new { @class = "col-md-4 control-label" })
+            <div class="col-md-4">
+                @Html.PasswordFor(m => m.Password, new { @style = "max-width: 100%;", @class = "form-control" })
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+        <div class="form-group">
+            @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-4 control-label" })
+            <div class="col-md-4">
+                @Html.PasswordFor(m => m.ConfirmPassword, new { @style = "max-width: 100%;", @class = "form-control" })
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" class="btn btn-default" value="Register" />
+        <div class="form-group">
+            <div class="col-md-12">
+                <input type="submit" class="btn btn-info btn-pressure" value="Register" />
+            </div>
         </div>
-    </div>
-}
+    }
+</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
