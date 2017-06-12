@@ -1,4 +1,5 @@
-﻿
+﻿@model IEnumerable<TheArmedairProject.Models.PostModels>
+
 @{
     ViewBag.Title = "Control Panel | Posts";
 }
@@ -28,6 +29,7 @@
 </header>
 
 <div class="container body-content">
+
     <!--Dashboard title [nothing special]-->
     <section id="breadcrumb">
         <div class="container">
@@ -80,19 +82,38 @@
                                     <input class="form-control" type="text" placeholder="Filter Posts..." />
                                 </div>
                             </div>
-                            <table class="table table-striped table-hover">
-                                <tr>
-                                    <th>Title</th>
-                                    <th>Published</th>
-                                    <th>Created</th>
-                                    <th>Options</th>
-                                </tr>
-                                <tr>
-                                    <td>Grand Open!</td>
-                                    <td><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
-                                    <td>*DATE*</td>
-                                    <td><a class="btn btn-default" href="#">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
-                                </tr>
+
+                    <!--Display Posts Info-->
+                    <table class="table table-striped table-hover">
+                        <tr>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Published</th>
+                            <th>Created</th>
+                            <th>Options</th>
+                        </tr>
+
+                    @foreach (var item in Model) {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Title)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Author)
+                            </td>
+                            <td>
+                                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ReleaseDate)
+                            </td>
+                            <td>
+                                <!--<input type="button" value="Edit" class="btn btn-default" onclick="location.href='@Url.Action("Index", "Home")'" />-->
+                                <a class="btn btn-default" href="#">Edit</a> 
+                                <a class="btn btn-danger" href="#">Delete</a>
+                            </td>
+                       </tr>
+                    }
                             </table>
                         </div>
                     </div>

@@ -1,4 +1,6 @@
-﻿@{
+﻿@model TheArmedairProject.Models.PostModels
+
+@{
     ViewBag.Title = "Create New Post";
 }
 <!--Blue Navigation Bar-->
@@ -26,28 +28,40 @@
 </header>
 
 <!---->
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
 
 <div class="container body-content">
     <div class="container" align="center">
         <br /><h1 class="deep-shadow">Create New Post</h1><br />
         <hr />
         <div class="row">
+            
+            <!--Author-->
             <div class="col-md-4">
                 <div class="input-group">
                     <h2>Author</h2>
-                    <input type="text" class="form-control">
+                    @Html.EditorFor(model => model.Author, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Author, "", new { @class = "text-danger" })
                 </div>
             </div>
+
+            <!--Title-->
             <div class="col-md-4">
                 <div class="input-group">
                     <h2>Title</h2>
-                    <input type="text" class="form-control">
+                    @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
                 </div>
             </div>
+
+            <!--Release Date-->
             <div class="col-md-4">
                 <div class="input-group">
                     <h2>Post Release Date</h2>
-                    <input type="text" class="form-control">
+                    @Html.EditorFor(model => model.ReleaseDate, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ReleaseDate, "", new { @class = "text-danger" })
                 </div>
             </div>
         </div>
@@ -55,7 +69,7 @@
 
         <!--Content-->
         <h2>Content</h2>
-        <textarea class="tinymce"></textarea>
+        @Html.TextAreaFor(model => model.Content, new { @class = "tinymce" })
         <br /><hr /><br />
 
         <!--Tags-->
@@ -67,15 +81,16 @@
 
         <!--Finish-->
         <div class="row" style="margin-bottom: 15px; float: right;">
-            <!--<div class="col-md-6" style="">-->
-                <button type="button" class="btn btn-hot btn-lg" onclick="discard()">Discard</button>
-                <button type="button" class="btn btn-fresh btn-lg">Save Changes</button>
-            <!--</div>-->
+            <button type="button" class="btn btn-hot btn-lg" onclick="discard()">Discard</button>
+            <button type="submit" value="Create" class="btn btn-fresh btn-lg">Save Changes</button>
         </div> 
-        @*<div class="checkbox">
-        @Html.CheckBoxFor(m => m.RememberMe)
-        @Html.LabelFor(m => m.RememberMe)
-    </div>*@
     </div>
 </div>
+}
+
+@section Scripts
+{
+    <script type="text/javascript" src="~/Scripts/tinymce/tinymce.js"></script>
+    <script type="text/javascript" src="~/Scripts/tinymce/init-tinymce.js"></script>
+}
 
