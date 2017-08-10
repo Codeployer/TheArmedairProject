@@ -1,4 +1,8 @@
-﻿.body-content {
+﻿#wrapper {
+    background-color: #E7E5E4;
+}
+
+.body-content {
     padding-top: 0;
 }
     /* =Header Settings= */
@@ -41,7 +45,7 @@
     /* == */
 .breadcrumb{
     margin-top: 20px;
-    background: #cccccc;
+    background: #d1d1d1;
     color: #333333;
 }
 

@@ -3,30 +3,6 @@
     ViewBag.Title = "Control Panel | Pages";
 }
 
-<!--Blue Navigation Bar-->
-<header id="header">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10">
-                <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Pages<small> Pages Management</small></h1>
-            </div>
-            <div class="col-md-2">
-                <div class="dropdown create">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Create Content
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <li><a href="@Url.Action("CreatePage", "AdminPanel")">Add Page</a></li>
-                        <li><a href="@Url.Action("CreatePost", "AdminPanel")">Add Post</a></li>
-                        <li><a href="@Url.Action("Index", "Permissions")">Edit Permissions</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
 <div class="container body-content">
     <!--Dashboard title [nothing special]-->
     <section id="breadcrumb">

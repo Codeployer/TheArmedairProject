@@ -15,26 +15,36 @@ namespace TheArmedairProject.Controllers
         // GET: AdminPanel
         public ActionResult Index()
         {
+            ViewBag.PageTitle = "Dashboard";
+            ViewBag.Description = "Manage Your Site";
             return View();
         }
 
         public ActionResult Pages()
         {
+            ViewBag.PageTitle = "Pages";
+            ViewBag.Description = "Pages Management";
             return View();
         }
 
         public ActionResult Posts()
         {
+            ViewBag.PageTitle = "Posts";
+            ViewBag.Description = "Posts Management";
             return View(db.PostsDB.ToList());
         }
 
         public ActionResult CreatePage()
         {
+            ViewBag.PageTitle = "Create New Page";
+            ViewBag.Description = "Let's develop out site...";
             return View();
         }
 
         public ActionResult CreatePost()
         {
+            ViewBag.PageTitle = "Create New Post";
+            ViewBag.Description = "Add Your Post...";
             return View();
         }
 
